@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: La Balanza de la Inflación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900">⚖️ La Balanza de la Inflación en Colombia</h1>
+            <p class="text-lg text-slate-600 mt-2">Principios de 2025</p>
+        </header>
+
+        <main class="flex flex-col items-center">
+            <!-- Contenedor de la balanza -->
+            <div class="w-full max-w-5xl">
+                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-stretch gap-8 relative">
+                    
+                    <!-- Platillo Izquierdo (Presiones a la Baja) -->
+                    <div class="w-full md:w-1/2 order-2 md:order-1">
+                        <div class="w-full bg-green-100 border-2 border-green-500 rounded-xl p-4 shadow-lg h-full">
+                            <h2 class="text-xl font-bold text-center text-green-800 mb-4">Presiones a la Baja 📉</h2>
+                            
+                            <!-- Tarjeta Bienes -->
+                            <div class="bg-white rounded-lg p-3 mb-3">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-2xl mr-3">🛒</span>
+                                    <h3 class="font-semibold text-slate-800">Bienes</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-2">La competencia, los costos de transporte normalizados y una demanda moderada mantuvieron sus precios bajos.</p>
+                                <p class="text-right font-bold text-2xl text-green-600">+0.9%</p>
+                            </div>
+
+                            <!-- Tarjeta Servicios Públicos -->
+                            <div class="bg-white rounded-lg p-3">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-2xl mr-3">💡</span>
+                                    <h3 class="font-semibold text-slate-800">Servicios Públicos (Parcial)</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-2">Los precios de la energía eléctrica y el acueducto ayudaron a frenar la inflación general.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platillo Derecho (Presiones al Alza) -->
+                    <div class="w-full md:w-1/2 order-1 md:order-2">
+                         <div class="w-full bg-red-100 border-2 border-red-500 rounded-xl p-4 shadow-lg h-full">
+                            <h2 class="text-xl font-bold text-center text-red-800 mb-4">Presiones al Alza 📈</h2>
+                            
+                            <!-- Tarjeta Servicios -->
+                            <div class="bg-white rounded-lg p-3 mb-3">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-2xl mr-3">🏠</span>
+                                    <h3 class="font-semibold text-slate-800">Servicios</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-2">El principal motor. La inercia de la inflación pasada y los costos laborales impulsaron los precios de arriendos y comidas.</p>
+                                <p class="text-right font-bold text-2xl text-red-600">+6.4%</p>
+                            </div>
+
+                            <!-- Tarjeta Gas -->
+                            <div class="bg-white rounded-lg p-3 mb-3">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-2xl mr-3">🔥</span>
+                                    <h3 class="font-semibold text-slate-800">Gas Domiciliario</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-2">Un alza inesperada por cambios en el suministro, afectando fuertemente el presupuesto de los hogares.</p>
+                            </div>
+
+                            <!-- Tarjeta Alimentos Procesados -->
+                            <div class="bg-white rounded-lg p-3">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-2xl mr-3">🥫</span>
+                                    <h3 class="font-semibold text-slate-800">Alimentos Procesados</h3>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-2">Impactados por impuestos, mayores costos de insumos (café, cacao) y costos laborales.</p>
+                                <p class="text-right font-bold text-2xl text-red-600">+4.7%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusión -->
+            <div class="mt-16 text-center max-w-2xl">
+                <h2 class="text-2xl font-bold text-slate-900 mb-3">Conclusión del Vistazo</h2>
+                <p id="conclusion-text" class="text-slate-700">
+                    La balanza se inclina claramente hacia el **alza**. Aunque los precios de los bienes dieron un respiro, el gran peso de los **Servicios**, sumado a los golpes inesperados del **Gas** y los **Alimentos Procesados**, mantiene la inflación general por encima de la meta. El descenso es real, pero estos factores lo hacen más lento y gradual.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: La Fábrica de Empleo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .flow-arrow {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #9ca3af; /* gray-400 */
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-bold text-slate-900">🧑‍💼 La Fábrica de Empleo</h1>
+            <p class="text-lg text-slate-600 mt-3">Un recorrido por el mercado laboral colombiano a principios de 2025</p>
+        </header>
+
+        <main class="relative max-w-2xl mx-auto">
+            <!-- Línea de flujo central -->
+            <div class="absolute top-0 bottom-0 left-1/2 w-1 bg-slate-300 -z-10 hidden sm:block"></div>
+
+            <!-- Paso 1: Puerta de Entrada -->
+            <div class="mb-12 relative">
+                <div class="sm:flex items-center">
+                    <div class="sm:w-1/2 sm:pr-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                            <h2 class="text-xl font-bold text-blue-800 mb-2">1. La Puerta de Entrada 🚪</h2>
+                            <p class="text-slate-600">Más personas decidieron entrar a la "fábrica" a buscar trabajo. El aumento fue liderado por las **mujeres**, que se sumaron con fuerza a la búsqueda.</p>
+                            <div class="mt-4 text-center bg-blue-100 text-blue-800 p-3 rounded-lg">
+                                <span class="block font-bold text-2xl">64.5%</span>
+                                <span class="text-sm">Tasa de Participación</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:w-1/2"></div>
+                </div>
+                <div class="flow-arrow -bottom-8 text-4xl hidden sm:block">↓</div>
+            </div>
+
+            <!-- Paso 2: Líneas de Producción -->
+            <div class="mb-12 relative">
+                 <div class="sm:flex items-center flex-row-reverse">
+                    <div class="sm:w-1/2 sm:pl-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
+                            <h2 class="text-xl font-bold text-teal-800 mb-2">2. Las Líneas de Producción 🏭</h2>
+                            <p class="text-slate-600 mb-4">Dentro de la fábrica, los nuevos empleos se crearon de forma muy desigual:</p>
+                            <div class="space-y-3">
+                                <div class="bg-slate-100 p-3 rounded-lg">
+                                    <h3 class="font-semibold">👔 Empleo Asalariado: <span class="font-normal">Ritmo lento, casi sin cambios.</span></h3>
+                                </div>
+                                <div class="bg-green-100 p-3 rounded-lg">
+                                    <h3 class="font-semibold">🛠️ Empleo No Asalariado: <span class="font-normal">¡A toda máquina! Fue la gran estrella.</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:w-1/2"></div>
+                </div>
+                <div class="flow-arrow -bottom-8 text-4xl hidden sm:block">↓</div>
+            </div>
+
+            <!-- Paso 3: Efecto Secundario -->
+            <div class="mb-12 relative">
+                <div class="sm:flex items-center">
+                    <div class="sm:w-1/2 sm:pr-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-500">
+                            <h2 class="text-xl font-bold text-amber-800 mb-2">3. El "Humo" de la Fábrica 💨</h2>
+                            <p class="text-slate-600">El rápido crecimiento del empleo no asalariado tuvo una consecuencia directa: un aumento de la informalidad. Muchos de los nuevos empleos no contaban con todas las prestaciones.</p>
+                             <div class="mt-4 text-center bg-amber-100 text-amber-800 p-3 rounded-lg">
+                                <span class="block font-bold text-2xl">56.4%</span>
+                                <span class="text-sm">Tasa de Informalidad</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:w-1/2"></div>
+                </div>
+                <div class="flow-arrow -bottom-8 text-4xl hidden sm:block">↓</div>
+            </div>
+
+            <!-- Paso 4: Resultado Final -->
+            <div class="relative">
+                <div class="sm:flex items-center flex-row-reverse">
+                    <div class="sm:w-1/2 sm:pl-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-600">
+                            <h2 class="text-xl font-bold text-green-800 mb-2">4. El Resultado Final ✅</h2>
+                            <p class="text-slate-600">A pesar de los desafíos, la fábrica **produjo empleos a un ritmo más rápido** que la cantidad de gente nueva que entró a buscar. El resultado: menos desempleo.</p>
+                            <div class="mt-4 text-center bg-green-100 text-green-800 p-3 rounded-lg">
+                                <span class="block font-bold text-2xl">9.4%</span>
+                                <span class="text-sm">Tasa de Desempleo Nacional</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:w-1/2"></div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

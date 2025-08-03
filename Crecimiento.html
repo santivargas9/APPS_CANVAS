@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: El Motor del Crecimiento Económico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900">🚗 El Motor del Crecimiento Económico</h1>
+            <p class="text-lg text-gray-600 mt-3">Un vistazo al viaje de la economía colombiana a principios de 2025</p>
+        </header>
+
+        <main class="space-y-12">
+            <!-- Sección Motor Principal -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-700">El Motor Principal: Demanda Interna 💪</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Card Consumo -->
+                    <div class="card bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+                        <div class="flex items-center mb-3">
+                            <span class="text-4xl mr-4">👨‍👩‍👧‍👦</span>
+                            <h3 class="text-xl font-semibold">Consumo de los Hogares</h3>
+                        </div>
+                        <p class="text-gray-600">Fueron todas las compras de las familias. Creció de manera importante, especialmente en bienes durables como electrodomésticos y tecnología. ¡La gente se animó a gastar!</p>
+                    </div>
+                    <!-- Card Inversión -->
+                    <div class="card bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+                        <div class="flex items-center mb-3">
+                            <span class="text-4xl mr-4">🏭</span>
+                            <h3 class="text-xl font-semibold">Inversión de las Empresas</h3>
+                        </div>
+                        <p class="text-gray-600">Fue el dinero que las empresas gastaron para crecer (maquinaria, oficinas). Tuvo una expansión notable, mostrando confianza en el futuro.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Impulsores y Freno -->
+            <div class="grid lg:grid-cols-3 gap-10">
+                <!-- Sección Impulsores Extra -->
+                <section class="lg:col-span-2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-green-700">Los Impulsores Extra: Sectores Estrella ⭐</h2>
+                    <div class="grid sm:grid-cols-3 gap-6">
+                        <div class="card text-center bg-white p-6 rounded-xl shadow-md border-b-4 border-green-500">
+                            <span class="text-5xl">🌾</span>
+                            <h3 class="font-bold mt-3 text-lg">Agropecuario</h3>
+                            <p class="text-sm text-gray-600 mt-1">El campo tuvo un buen desempeño, produciendo más alimentos.</p>
+                        </div>
+                        <div class="card text-center bg-white p-6 rounded-xl shadow-md border-b-4 border-green-500">
+                            <span class="text-5xl">🏗️</span>
+                            <h3 class="font-bold mt-3 text-lg">Obras Civiles</h3>
+                            <p class="text-sm text-gray-600 mt-1">Grandes proyectos de infraestructura avanzaron a buen ritmo.</p>
+                        </div>
+                        <div class="card text-center bg-white p-6 rounded-xl shadow-md border-b-4 border-green-500">
+                            <span class="text-5xl">🎭</span>
+                            <h3 class="font-bold mt-3 text-lg">Arte y Entretenimiento</h3>
+                            <p class="text-sm text-gray-600 mt-1">Conciertos y eventos culturales movieron la economía.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Freno -->
+                <section>
+                    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-red-700">El Freno: Balanza Comercial 🚧</h2>
+                     <div class="card text-center bg-white p-6 rounded-xl shadow-md border-b-4 border-red-500 h-full flex flex-col justify-center">
+                        <span class="text-5xl">📉</span>
+                        <h3 class="font-bold mt-3 text-lg">Importaciones > Exportaciones</h3>
+                        <p class="text-sm text-gray-600 mt-1">Compramos más cosas de otros países de las que les vendimos. Esto le restó velocidad al crecimiento total.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Conclusión Final -->
+            <section class="text-center bg-gray-800 text-white p-8 rounded-xl mt-16 max-w-3xl mx-auto shadow-2xl">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">Conclusión del Viaje</h2>
+                <p class="text-lg md:text-xl text-gray-300">El carro de la economía colombiana avanzó a una velocidad del <span class="text-yellow-400 font-bold text-2xl">+2.4%</span>. El potente motor de la demanda interna y los turbos de los sectores estrella lo empujaron con fuerza, superando la resistencia del freno comercial.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

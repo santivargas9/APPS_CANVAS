@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: El Sistema de Riego Financiero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-bold text-slate-900">🏦 El Sistema de Riego Financiero</h1>
+            <p class="text-lg text-slate-600 mt-3">Un vistazo a cómo fluyó el crédito en Colombia a principios de 2025</p>
+        </header>
+
+        <main class="max-w-5xl mx-auto">
+            <!-- Flujo Principal -->
+            <div class="text-center mb-12">
+                <div class="inline-block bg-white p-6 rounded-xl shadow-lg border-b-4 border-blue-500">
+                    <h2 class="text-xl font-bold text-blue-800 mb-2 flex items-center justify-center">
+                        <span class="text-3xl mr-3">💧</span>
+                        El Flujo Principal: El Crédito
+                    </h2>
+                    <p class="text-slate-600">El agua está volviendo a correr, pero de forma **lenta y gradual**.</p>
+                </div>
+            </div>
+
+            <!-- Flechas de flujo -->
+            <div class="flex justify-center mb-8">
+                <svg width="80" height="80" viewBox="0 0 24 24" class="text-blue-400">
+                    <path fill="currentColor" d="M12 15a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 12.59l3.29-3.3a1 1 0 0 1 1.42 1.42l-4 4A1 1 0 0 1 12 15Z"/>
+                    <path fill="currentColor" d="M12 9a1 1 0 0 1-.71-.29l-4-4a1 1 0 0 1 1.42-1.42L12 6.59l3.29-3.3a1 1 0 0 1 1.42 1.42l-4 4A1 1 0 0 1 12 9Z"/>
+                </svg>
+            </div>
+
+            <!-- Canales -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Canales Abiertos -->
+                <div class="bg-green-100 p-6 rounded-xl shadow-md border-2 border-green-300">
+                    <h3 class="text-lg font-bold text-center text-green-800 mb-4">✅ Canales Abiertos</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold flex items-center mb-1"><span class="text-2xl mr-2">🏡</span>Crédito para Vivienda</h4>
+                            <p class="text-sm text-slate-600">¡Fluyendo bien! Las familias siguieron recibiendo préstamos para comprar casa.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold flex items-center mb-1"><span class="text-2xl mr-2">🏪</span>Microcrédito</h4>
+                            <p class="text-sm text-slate-600">¡Fluyendo estable! Los pequeños negocios recibieron el apoyo que necesitaban.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canal Lento -->
+                <div class="bg-amber-100 p-6 rounded-xl shadow-md border-2 border-amber-300">
+                    <h3 class="text-lg font-bold text-center text-amber-800 mb-4">⚠️ Canal Lento</h3>
+                    <div class="bg-white p-4 rounded-lg h-[calc(100%-40px)] flex flex-col justify-center">
+                        <h4 class="font-semibold flex items-center mb-1"><span class="text-2xl mr-2">💳</span>Crédito de Consumo</h4>
+                        <p class="text-sm text-slate-600">Flujo lento, todavía en negativo. Se usó más para refinanciar deudas que para nuevas compras.</p>
+                    </div>
+                </div>
+
+                <!-- Riesgo en el Embalse -->
+                <div class="bg-red-100 p-6 rounded-xl shadow-md border-2 border-red-300">
+                    <h3 class="text-lg font-bold text-center text-red-800 mb-4">🚱 Riesgo en el Embalse</h3>
+                     <div class="bg-white p-4 rounded-lg h-[calc(100%-40px)] flex flex-col justify-center">
+                        <h4 class="font-semibold flex items-center mb-1"><span class="text-2xl mr-2">❗</span>La Mora</h4>
+                        <p class="text-sm text-slate-600">El no pago de deudas se mantiene en **niveles altos**. Aunque no empeora, es un riesgo para la salud del sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

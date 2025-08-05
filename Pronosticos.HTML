@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Los Pronósticos de la Economía Colombiana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .highlight-red {
+            color: #dc2626;
+        }
+        .highlight-green {
+            color: #16a34a;
+        }
+        .bg-red-light {
+            background-color: #fee2e2;
+        }
+        .bg-green-light {
+            background-color: #f0fdf4;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+            border-left: 2px solid #e5e7eb;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.5rem;
+            top: 0.25rem;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 9999px;
+            background-color: white;
+            border: 2px solid #9ca3af;
+        }
+        .timeline-dot-red {
+            border-color: #dc2626;
+        }
+        .timeline-dot-green {
+            border-color: #16a34a;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">🔮 Los Pronósticos Económicos</h1>
+            <p class="mt-2 text-lg text-gray-600">¿Hacia dónde se dirige la economía colombiana? (2025-2026)</p>
+        </header>
+
+        <!-- Grid for Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Card 1: Inflación -->
+            <div class="card">
+                <div class="flex items-center mb-6">
+                    <div class="text-4xl mr-4">🏷️</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Pronóstico de Inflación</h2>
+                        <p class="text-gray-500">Convergencia lenta hacia la meta</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="timeline">
+                        <div class="timeline-dot timeline-dot-red"></div>
+                        <p class="text-sm text-gray-500">Cierre de 2025</p>
+                        <p class="text-3xl font-bold highlight-red">4,7%</p>
+                        <p class="text-sm text-gray-600 mt-1">La inflación se mantendrá alta por la fortaleza del consumo y los costos laborales.</p>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-dot timeline-dot-red"></div>
+                        <p class="text-sm text-gray-500">Cierre de 2026</p>
+                        <p class="text-3xl font-bold highlight-red">3,2%</p>
+                        <p class="text-sm text-gray-600 mt-1">Se acercará a la meta del 3%, pero a un ritmo más pausado de lo previsto anteriormente.</p>
+                    </div>
+                </div>
+                 <div class="mt-6 pt-4 border-t border-gray-200">
+                    <h4 class="font-semibold text-gray-800">Lógica del pronóstico:</h4>
+                    <p class="text-sm text-gray-600 mt-2">La política monetaria restrictiva (tasas de interés altas) seguirá haciendo su trabajo para frenar los precios, pero las presiones de la demanda interna y los costos harán que el camino hacia la meta del 3% sea más largo.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Crecimiento (PIB) -->
+            <div class="card">
+                <div class="flex items-center mb-6">
+                    <div class="text-4xl mr-4">📈</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Pronóstico de Crecimiento</h2>
+                        <p class="text-gray-500">Expansión moderada y estable</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="timeline">
+                        <div class="timeline-dot timeline-dot-green"></div>
+                        <p class="text-sm text-gray-500">Cierre de 2025</p>
+                        <p class="text-3xl font-bold highlight-green">2,7%</p>
+                        <p class="text-sm text-gray-600 mt-1">El consumo de los hogares seguirá siendo el principal motor de la economía.</p>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-dot timeline-dot-green"></div>
+                        <p class="text-sm text-gray-500">Cierre de 2026</p>
+                        <p class="text-3xl font-bold highlight-green">2,9%</p>
+                        <p class="text-sm text-gray-600 mt-1">Se espera una leve aceleración, apoyada en una recuperación gradual de la inversión.</p>
+                    </div>
+                </div>
+                 <div class="mt-6 pt-4 border-t border-gray-200">
+                    <h4 class="font-semibold text-gray-800">Lógica del pronóstico:</h4>
+                    <p class="text-sm text-gray-600 mt-2">La economía seguirá creciendo a un ritmo saludable, pero no espectacular. El gran reto es reactivar la inversión para que el crecimiento sea más robusto y sostenible a largo plazo.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

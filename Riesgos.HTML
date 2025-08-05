@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: El Balance de Riesgos Económicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+        }
+        .risk-item {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 1rem;
+        }
+        .risk-icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+        .risk-content h4 {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .risk-content p {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+        .separator {
+            border-top: 1px dashed #d1d5db;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">⚖️ El Balance de Riesgos</h1>
+            <p class="mt-2 text-lg text-gray-600">¿Qué podría cambiar el rumbo de la economía?</p>
+        </header>
+
+        <!-- Grid for Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Card 1: Riesgos para la Inflación -->
+            <div class="card">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-4">⚠️</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Riesgos para la Inflación</h2>
+                        <p class="text-gray-500">La balanza se inclina al alza</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">Existen varios factores que podrían hacer que los precios suban más de lo esperado. Son las "nubes en el cielo" para la inflación.</p>
+                
+                <div class="flex-grow">
+                    <div class="risk-item">
+                        <div class="risk-icon">⬆️</div>
+                        <div class="risk-content">
+                            <h4>Riesgo Fiscal (El principal)</h4>
+                            <p>Un mayor déficit del gobierno podría aumentar la desconfianza, debilitar el peso y encarecer los productos importados.</p>
+                        </div>
+                    </div>
+                    <div class="risk-item">
+                        <div class="risk-icon">⬆️</div>
+                        <div class="risk-content">
+                            <h4>Costos Laborales</h4>
+                            <p>Un aumento del salario mínimo en 2026 muy superior a la productividad podría presionar los costos de las empresas, que luego lo trasladarían a los precios.</p>
+                        </div>
+                    </div>
+                    <div class="risk-item">
+                        <div class="risk-icon">⬆️</div>
+                        <div class="risk-content">
+                            <h4>Riesgos de Oferta</h4>
+                            <p>Problemas en el suministro de gas o fenómenos climáticos adversos podrían disparar los precios de la energía y los alimentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Riesgos para el Crecimiento -->
+            <div class="card">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-4">🔄</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Riesgos para el Crecimiento</h2>
+                        <p class="text-gray-500">Una balanza con fuerzas opuestas</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">Aquí la situación es mixta. Hay factores que podrían frenar la economía y otros que podrían impulsarla más de lo previsto.</p>
+                
+                <div class="flex-grow">
+                    <h3 class="font-semibold text-lg text-red-600">Riesgos a la Baja (Frenos 📉)</h3>
+                    <div class="risk-item">
+                        <div class="risk-icon">📉</div>
+                        <div class="risk-content">
+                            <h4>Ajuste Fiscal</h4>
+                            <p>La necesidad de recortar el gasto público para ordenar las finanzas podría restarle impulso a la demanda interna.</p>
+                        </div>
+                    </div>
+                     <div class="risk-item">
+                        <div class="risk-icon">📉</div>
+                        <div class="risk-content">
+                            <h4>Entorno Mundial</h4>
+                            <p>Una desaceleración global podría reducir las exportaciones y el dinero que llega por remesas.</p>
+                        </div>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <h3 class="font-semibold text-lg text-green-600">Riesgos al Alza (Impulsores 📈)</h3>
+                    <div class="risk-item">
+                        <div class="risk-icon">📈</div>
+                        <div class="risk-content">
+                            <h4>Consumo más Fuerte</h4>
+                            <p>El gasto de los hogares podría ser incluso más dinámico de lo que ya se espera, jalando la economía.</p>
+                        </div>
+                    </div>
+                     <div class="risk-item">
+                        <div class="risk-icon">📈</div>
+                        <div class="risk-content">
+                            <h4>Inversión en Infraestructura</h4>
+                            <p>Una aceleración en la ejecución de grandes obras (como el Metro de Bogotá) podría impulsar el sector de la construcción y el empleo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

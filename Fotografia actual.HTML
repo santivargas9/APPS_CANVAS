@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: La Situación Actual de la Economía Colombiana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .highlight-blue {
+            color: #2563eb;
+        }
+        .highlight-green {
+            color: #16a34a;
+        }
+        .highlight-yellow {
+            color: #ca8a04;
+        }
+        .bg-blue-light {
+            background-color: #eff6ff;
+        }
+        .bg-green-light {
+            background-color: #f0fdf4;
+        }
+        .bg-yellow-light {
+            background-color: #fefce8;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">📍 La Situación Actual de la Economía</h1>
+            <p class="mt-2 text-lg text-gray-600">Un vistazo a los pilares de la economía colombiana (Julio 2025)</p>
+        </header>
+
+        <!-- Grid for Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Card 1: Inflación -->
+            <div class="card">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-4">🏷️</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Inflación</h2>
+                        <p class="text-gray-500">Los precios bajan, pero lento</p>
+                    </div>
+                </div>
+                <div class="bg-blue-light p-4 rounded-lg mb-6 text-center">
+                    <p class="text-sm text-blue-800">Inflación Anual (Junio)</p>
+                    <p class="text-4xl font-bold highlight-blue">4,8%</p>
+                </div>
+                
+                <div class="space-y-4 text-gray-700">
+                    <h3 class="font-semibold text-lg text-gray-800">¿Qué impulsa los precios?</h3>
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">🚗</span>
+                        <div>
+                            <h4 class="font-semibold">Motores Principales</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li><strong>Costos Laborales:</strong> Salarios más altos.</li>
+                                <li><strong>Fuerte Consumo:</strong> Alta demanda de productos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                         <span class="text-2xl mr-3">⬆️</span>
+                        <div>
+                            <h4 class="font-semibold">Los que más suben</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Comidas fuera del hogar</li>
+                                <li>Arriendos</li>
+                                <li>Bienes y transporte</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Crecimiento (PIB) -->
+            <div class="card">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-4">📈</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Crecimiento (PIB)</h2>
+                        <p class="text-gray-500">Una economía a dos velocidades</p>
+                    </div>
+                </div>
+                <div class="bg-green-light p-4 rounded-lg mb-6 text-center">
+                    <p class="text-sm text-green-800">Crecimiento Anual (1er Trimestre)</p>
+                    <p class="text-4xl font-bold highlight-green">2,7%</p>
+                </div>
+                
+                <div class="space-y-4 text-gray-700">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">🛍️</span>
+                        <div>
+                            <h4 class="font-semibold">El Gran Impulsor: Consumo</h4>
+                            <p class="text-sm text-gray-600">La gente gasta más gracias a remesas, buenos ingresos cafeteros y mejores salarios.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">🚧</span>
+                        <div>
+                            <h4 class="font-semibold">El Gran Freno: Inversión</h4>
+                            <p class="text-sm text-gray-600">La inversión en grandes proyectos, sobre todo en construcción de vivienda y oficinas, sigue débil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Mercado Laboral -->
+            <div class="card">
+                <div class="flex items-center mb-4">
+                    <div class="text-4xl mr-4">💼</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Mercado Laboral</h2>
+                        <p class="text-gray-500">Más cantidad, dudas en calidad</p>
+                    </div>
+                </div>
+                <div class="bg-yellow-light p-4 rounded-lg mb-6 text-center">
+                    <p class="text-sm text-yellow-800">Tasa de Desempleo (Mayo)</p>
+                    <p class="text-4xl font-bold highlight-yellow">8,9%</p>
+                </div>
+
+                <div class="space-y-4 text-gray-700">
+                     <div class="flex items-start">
+                        <span class="text-2xl mr-3">✅</span>
+                        <div>
+                            <h4 class="font-semibold">Vaso Medio Lleno</h4>
+                            <p class="text-sm text-gray-600">La tasa de desempleo es baja, lo que indica que se están ocupando puestos de trabajo.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">⚠️</span>
+                        <div>
+                            <h4 class="font-semibold">Vaso Medio Vacío</h4>
+                            <p class="text-sm text-gray-600">Crece el empleo informal (no asalariado) mientras que el empleo formal (asalariado y con prestaciones) está estancado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

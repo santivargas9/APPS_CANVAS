@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceptual: Economía Colombiana 1er Semestre 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Se añade la librería Chart.js para los gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .concept-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modal-backdrop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-content {
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .modal-backdrop.active .modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Aprendizajes Simples</h1>
+            <p class="text-slate-600 mt-2">Estado de la Economía Colombiana - 1er Semestre 2025</p>
+        </header>
+
+        <div id="map-container" class="relative flex flex-col items-center">
+            <!-- Nodo Central -->
+            <div id="central-node" class="bg-white border-2 border-blue-500 rounded-xl p-4 md:p-6 shadow-lg text-center w-64 md:w-80 mb-16">
+                <h2 class="text-xl font-bold text-blue-600">Economía Colombiana</h2>
+                <p class="text-sm text-slate-500">Análisis 1er Semestre 2025</p>
+            </div>
+
+            <!-- Contenedor de Ramas -->
+            <div class="w-full flex flex-col md:flex-row justify-around items-start gap-4">
+                <!-- Rama: Aspectos Positivos -->
+                <div id="positive-branch" class="flex flex-col items-center w-full md:w-1/3 p-2">
+                    <h3 class="text-lg font-semibold text-green-600 mb-4 border-b-2 border-green-300 pb-2 w-full text-center">🟢 Aspectos Positivos</h3>
+                    <div class="space-y-4 w-full">
+                        <div class="concept-card bg-green-100 border-l-4 border-green-500 rounded-lg p-4 shadow-md" onclick="showModal('Crecimiento del PIB', 'La economía colombiana continuó su senda de recuperación, registrando una expansión anual del 2.7% en el primer trimestre de 2025. Este crecimiento fue impulsado principalmente por el fortalecimiento de la demanda interna, que creció un 4.7%.', 'bg-green-500', 'pibChart')">
+                            <h4 class="font-semibold text-green-800">Crecimiento del PIB</h4>
+                            <p class="text-sm text-green-700">Expansión anual del 2.7%</p>
+                        </div>
+                        <div class="concept-card bg-green-100 border-l-4 border-green-500 rounded-lg p-4 shadow-md" onclick="showModal('Bajo Desempleo', 'El mercado laboral mostró un buen desempeño. La tasa de desempleo se ubicó en 9.0% en mayo, una de las más bajas de los últimos años. Se crearon 788,000 puestos de trabajo, principalmente en cabeceras y zonas rurales.', 'bg-green-500', 'desempleoChart')">
+                            <h4 class="font-semibold text-green-800">Bajo Desempleo</h4>
+                            <p class="text-sm text-green-700">Tasa del 9.0% en mayo</p>
+                        </div>
+                        <div class="concept-card bg-green-100 border-l-4 border-green-500 rounded-lg p-4 shadow-md" onclick="showModal('Aumento de Reservas', 'Las reservas internacionales netas aumentaron en USD 2,682 millones durante el primer semestre, alcanzando los USD 65,163 millones. Este incremento se debió principalmente a la buena rentabilidad de las inversiones.', 'bg-green-500', 'reservasChart')">
+                            <h4 class="font-semibold text-green-800">Aumento de Reservas</h4>
+                            <p class="text-sm text-green-700">Crecimiento a USD 65.1 mil millones</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rama: Aspectos a Vigilar -->
+                <div id="watch-branch" class="flex flex-col items-center w-full md:w-1/3 p-2 mt-8 md:mt-0">
+                    <h3 class="text-lg font-semibold text-yellow-600 mb-4 border-b-2 border-yellow-300 pb-2 w-full text-center">🟡 Aspectos a Vigilar</h3>
+                    <div class="space-y-4 w-full">
+                        <div class="concept-card bg-yellow-100 border-l-4 border-yellow-500 rounded-lg p-4 shadow-md" onclick="showModal('Inflación Persistente', 'La inflación anual se redujo al 4.8% en junio, pero su convergencia a la meta del 3% ha sido más lenta de lo esperado. La inflación de alimentos y servicios ha mostrado resistencia a la baja.', 'bg-yellow-500', 'inflacionChart')">
+                            <h4 class="font-semibold text-yellow-800">Inflación Persistente</h4>
+                            <p class="text-sm text-yellow-700">4.8% anual, por encima de la meta (3%)</p>
+                        </div>
+                        <div class="concept-card bg-yellow-100 border-l-4 border-yellow-500 rounded-lg p-4 shadow-md" onclick="showModal('Política Monetaria Cautelosa', 'Debido a la lenta reducción de la inflación y a la incertidumbre, la Junta Directiva ha sido cautelosa. La tasa de interés se redujo solo 25 puntos básicos en el semestre, situándose en 9.25%.', 'bg-yellow-500', 'tpmChart')">
+                            <h4 class="font-semibold text-yellow-800">Política Monetaria Cautelosa</h4>
+                            <p class="text-sm text-yellow-700">Tasa de interés en 9.25%</p>
+                        </div>
+                        <div class="concept-card bg-yellow-100 border-l-4 border-yellow-500 rounded-lg p-4 shadow-md" onclick="showModal('Déficit de Cuenta Corriente', 'El déficit de la cuenta corriente se amplió al 2.2% del PIB. Esto se debió a que las importaciones crecieron más que las exportaciones, impulsadas por el fuerte consumo interno.', 'bg-yellow-500', 'cuentaCorrienteChart')">
+                            <h4 class="font-semibold text-yellow-800">Déficit de Cuenta Corriente</h4>
+                            <p class="text-sm text-yellow-700">Se amplió al 2.2% del PIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rama: Desafíos y Riesgos -->
+                <div id="challenges-branch" class="flex flex-col items-center w-full md:w-1/3 p-2 mt-8 md:mt-0">
+                    <h3 class="text-lg font-semibold text-red-600 mb-4 border-b-2 border-red-300 pb-2 w-full text-center">🔴 Desafíos y Riesgos</h3>
+                    <div class="space-y-4 w-full">
+                        <div class="concept-card bg-red-100 border-l-4 border-red-500 rounded-lg p-4 shadow-md" onclick="showModal('Aumento del Déficit Fiscal', 'El déficit del Gobierno Nacional Central (GNC) aumentó y se proyecta en 7.1% del PIB para 2025. Esto llevó a activar la cláusula de escape de la regla fiscal, generando preocupación sobre la sostenibilidad de las finanzas públicas.', 'bg-red-500', 'deficitFiscalChart')">
+                            <h4 class="font-semibold text-red-800">Aumento del Déficit Fiscal</h4>
+                            <p class="text-sm text-red-700">Proyectado en 7.1% del PIB para 2025</p>
+                        </div>
+                         <div class="concept-card bg-red-100 border-l-4 border-red-500 rounded-lg p-4 shadow-md" onclick="showModal('Incertidumbre Externa', 'El entorno internacional es incierto. Los anuncios de aranceles por parte de EE.UU. y la volatilidad financiera global representan riesgos para el comercio y el crecimiento de Colombia.', 'bg-red-500', 'riesgoPaisChart')">
+                            <h4 class="font-semibold text-red-800">Incertidumbre Externa</h4>
+                            <p class="text-sm text-red-700">Aranceles y volatilidad global</p>
+                        </div>
+                        <div class="concept-card bg-red-100 border-l-4 border-red-500 rounded-lg p-4 shadow-md" onclick="showModal('Baja Inversión en Construcción', 'A pesar del buen consumo, la inversión en capital fijo se mantuvo estancada. La contracción en la construcción de vivienda y otras edificaciones limitó un mayor crecimiento económico.', 'bg-red-500', 'inversionChart')">
+                            <h4 class="font-semibold text-red-800">Baja Inversión en Construcción</h4>
+                            <p class="text-sm text-red-700">Contracción en vivienda y edificaciones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-backdrop" onclick="closeModal()">
+        <div class="modal-content bg-white rounded-xl shadow-2xl w-11/12 md:max-w-2xl overflow-hidden" onclick="event.stopPropagation()">
+            <div id="modal-header" class="p-4 text-white">
+                <h3 id="modal-title" class="text-xl font-bold"></h3>
+            </div>
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <p id="modal-body" class="text-slate-600"></p>
+                <div class="w-full h-full min-h-[200px]">
+                    <canvas id="modal-chart"></canvas>
+                </div>
+            </div>
+            <div class="bg-slate-100 p-4 text-right">
+                <button onclick="closeModal()" class="bg-slate-500 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalHeader = document.getElementById('modal-header');
+        const chartCanvas = document.getElementById('modal-chart');
+        let chartInstance = null;
+        
+        // Almacén de datos para los gráficos
+        const chartDataStore = {
+            pibChart: {
+                type: 'line',
+                data: {
+                    labels: ['IV Trim 2024', 'I Trim 2025', 'II Trim 2025 (proy.)'],
+                    datasets: [{
+                        label: 'Crecimiento Anual del PIB (%)',
+                        data: [2.6, 2.7, 2.6],
+                        borderColor: 'rgb(34, 197, 94)',
+                        backgroundColor: 'rgba(34, 197, 94, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            },
+            desempleoChart: {
+                type: 'bar',
+                data: {
+                    labels: ['Mayo 2024', 'Mayo 2025'],
+                    datasets: [{
+                        label: 'Tasa de Desempleo Nacional (%)',
+                        data: [10.3, 9.0], // Dato de 2024 inferido de la reducción de 1.3pp
+                        backgroundColor: ['rgba(132, 204, 22, 0.6)', 'rgba(74, 222, 128, 0.6)'],
+                        borderColor: ['rgb(132, 204, 22)', 'rgb(74, 222, 128)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } } }
+            },
+            reservasChart: {
+                 type: 'bar',
+                data: {
+                    labels: ['Cierre 2024', 'Junio 2025'],
+                    datasets: [{
+                        label: 'Reservas Internacionales (miles de millones USD)',
+                        data: [62.481, 65.163],
+                        backgroundColor: ['rgba(5, 150, 105, 0.6)', 'rgba(16, 185, 129, 0.6)'],
+                        borderColor: ['rgb(5, 150, 105)', 'rgb(16, 185, 129)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: false } } }
+            },
+            inflacionChart: {
+                type: 'line',
+                data: {
+                    labels: ['Dic-24', 'Feb-25', 'Abr-25', 'Jun-25'],
+                    datasets: [{
+                        label: 'Inflación Anual (%)',
+                        data: [5.2, 5.28, 5.16, 4.82],
+                        borderColor: 'rgb(234, 179, 8)',
+                        tension: 0.1
+                    }, {
+                        label: 'Meta',
+                        data: [3, 3, 3, 3],
+                        borderColor: 'rgb(202, 138, 4)',
+                        borderDash: [5, 5],
+                        pointRadius: 0
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            },
+            tpmChart: {
+                type: 'line',
+                data: {
+                    labels: ['Dic-24', 'Ene-25', 'Mar-25', 'Abr-25', 'Jun-25'],
+                    datasets: [{
+                        label: 'Tasa de Política Monetaria (%)',
+                        data: [9.5, 9.5, 9.5, 9.25, 9.25],
+                        borderColor: 'rgb(217, 119, 6)',
+                        stepped: true
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            },
+            cuentaCorrienteChart: {
+                type: 'bar',
+                data: {
+                    labels: ['I Trim 2024', 'I Trim 2025'],
+                    datasets: [{
+                        label: 'Déficit Cuenta Corriente (% del PIB)',
+                        data: [-1.9, -2.2],
+                        backgroundColor: ['rgba(253, 186, 116, 0.6)', 'rgba(251, 146, 60, 0.6)'],
+                        borderColor: ['rgb(253, 186, 116)', 'rgb(251, 146, 60)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } } }
+            },
+            deficitFiscalChart: {
+                type: 'bar',
+                data: {
+                    labels: ['2023', '2024', '2025 (proy.)'],
+                    datasets: [{
+                        label: 'Déficit GNC (% del PIB)',
+                        data: [-4.2, -6.7, -7.1],
+                        backgroundColor: ['rgba(252, 165, 165, 0.6)', 'rgba(239, 68, 68, 0.6)', 'rgba(220, 38, 38, 0.6)'],
+                        borderColor: ['rgb(252, 165, 165)', 'rgb(239, 68, 68)', 'rgb(220, 38, 38)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } } }
+            },
+            riesgoPaisChart: {
+                type: 'line',
+                data: {
+                    labels: ['Ene-25', 'Mar-25', 'May-25', 'Jul-25'],
+                    datasets: [{
+                        label: 'Prima de Riesgo - CDS 5 años (puntos base)',
+                        data: [180, 200, 280, 220], // Datos aproximados del Gráfico 4.17
+                        borderColor: 'rgb(225, 29, 72)',
+                        tension: 0.1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            },
+            inversionChart: {
+                 type: 'bar',
+                data: {
+                    labels: ['Vivienda', 'Otros Edificios y Estructuras'],
+                    datasets: [{
+                        label: 'Crecimiento Anual Inversión (I Trim 2025)',
+                        data: [-8.5, -8.8],
+                        backgroundColor: ['rgba(244, 63, 94, 0.6)', 'rgba(190, 18, 60, 0.6)'],
+                        borderColor: ['rgb(244, 63, 94)', 'rgb(190, 18, 60)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } } }
+            }
+        };
+
+        function showModal(title, body, headerClass, chartId) {
+            modalTitle.textContent = title;
+            modalBody.textContent = body;
+            modalHeader.className = `p-4 text-white ${headerClass}`;
+            modal.classList.add('active');
+
+            // Destruye el gráfico anterior si existe
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            // Crea el nuevo gráfico
+            const chartConfig = chartDataStore[chartId];
+            if (chartConfig) {
+                chartInstance = new Chart(chartCanvas, chartConfig);
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            // Destruye el gráfico al cerrar para liberar memoria
+            if (chartInstance) {
+                chartInstance.destroy();
+                chartInstance = null;
+            }
+        }
+
+        // Cerrar modal con la tecla Escape
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
